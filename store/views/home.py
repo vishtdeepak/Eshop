@@ -5,7 +5,6 @@ from store.models.customer import Customer
 from django.views import View
 
 class Index(View):
-
 	def post(self, request):
 		product = request.POST.get('product')
 		remove = request.POST.get('remove')
@@ -55,8 +54,6 @@ def listing(request, listing_id):
 	return render(request, 'listing.html', context)
 
 
-
-
 def search(request):
 	products = Product.objects.all()
 	if 'keywords' in request.GET:
@@ -71,12 +68,6 @@ def search(request):
 	return render(request, 'search.html', {'products': products})
 
 	
-
-
-
-
-
-
 # def login(request):
 # 	if request.method == 'GET':
 # 		return render(request, 'login.html')

@@ -2,9 +2,7 @@
 {% load cart %}
 <div class="container-fluid mt-3">
     <div class="row">
-
         <!-- filter -->
-
         <div class="col-lg-2 mx-auto">
             <div class="list-group">
                 <a href="/" class="list-group-item 
@@ -12,10 +10,7 @@
                 <a href="/?category={{category.id}}" class="list-group-item list-group-item-action">{{category.name}}</a> {% endfor %}
             </div>
         </div>
-
-
         <!-- all Products-->
-
         <div id="products" class="col-lg-8 mx-auto">
             <div class="row mx-auto">
                 {% for product in products %}
@@ -47,29 +42,13 @@
                                 <input hidden type="text" name="product" value="{{product.id}}" readonly>
                                 <input type="submit" class="float-right btn btn-light border form-control" value="Add To Cart">
                             </form> 
-                            {%endif%}      
-                            <a href="{% url 'homepage' listing.id %}" class="btn btn-primary btn-block">More Info</a>                       
+                            {%endif%}                                                 
                         </div>                                                                     
                     </div>                
                 </div>
                 {% endfor %}
             </div>
         </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    </div>    
 </div>
-
 {% endblock content %}
