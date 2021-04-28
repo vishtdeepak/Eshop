@@ -55,6 +55,7 @@ def listing(request, listing_id):
 
 
 def search(request):
+	breakpoint()
 	products = Product.objects.all()
 	if 'keywords' in request.GET:
 		keywords = request.GET['keywords']

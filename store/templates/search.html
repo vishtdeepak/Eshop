@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
+
 <div class="row mx-auto">
+	
 {% for product in products %}
 	<div class="card" style="width: 18rem;">
 		<img src="{{product.image.url}}" class="card-img-top" alt="...">
